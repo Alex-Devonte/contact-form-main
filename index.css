@@ -6,10 +6,15 @@
 :root {
   --primary-light-green: hsl(148, 38%, 91%);
   --primary-dark-green: hsl(169, 82%, 27%);
+
+  --neutral-medium-grey: hsl(186, 15%, 59%);
+  --neutral-dark-grey: hsl(187, 24%, 22%);
+  --error-red: hsl(0, 66%, 54%);
 }
 
 body {
   background-color: hsl(148, 38%, 91%);
+  color: var(--neutral-dark-grey);
   font-family: "Karla";
 }
 
@@ -35,6 +40,7 @@ body {
 }
 
 h1 {
+  font-weight: 700;
   margin: 35px 0 20px 0;
 }
 
@@ -47,22 +53,47 @@ h1 {
 
 label {
   font-size: 16px;
+  font-weight: 400;
+}
+
+.required-star {
+  color: var(--primary-dark-green);
+  font-size: 16px;
+  margin-left: 5px;
 }
 
 .text-input {
-  border-radius: 5px;
-  padding: 8px;
+  border: 1px solid var(--neutral-medium-grey);
+  border-radius: 8px;
+  padding: 14px;
 }
 
 .radio-option {
-  border: 1px solid black;
+  border: 1px solid var(--neutral-medium-grey);
   border-radius: 5px;
-  padding: 8px;
+  cursor: pointer;
+  padding: 14px;
 }
 
 #message-txt-area {
   border-radius: 5px;
-  height: 150px;
+  resize: none;
+}
+
+.radio-option {
+}
+
+input[type="radio"]:checked + div + .radio-option {
+  background-color: lightblue;
+  border-color: blue;
+}
+
+.text-input:focus,
+.text-input:hover,
+#message-txt-area:focus,
+#message-txt-area:hover {
+  cursor: pointer;
+  outline: 1px solid var(--primary-dark-green);
 }
 
 .consent-group {
@@ -70,8 +101,18 @@ label {
 }
 
 #submit-btn {
+  background-color: var(--primary-dark-green);
+  border: none;
   border-radius: 5px;
-  padding: 12px;
+  color: #fff;
+  cursor: pointer;
+  font-family: "karla";
+  margin: 10px 0;
+  padding: 15px;
+}
+
+#submit-btn:hover {
+  background-color: #034134;
 }
 
 @media only screen and (min-width: 576px) {
