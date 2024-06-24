@@ -75,17 +75,16 @@ label {
   padding: 14px;
 }
 
+.checked {
+  background-color: var(--primary-light-green);
+}
+
 #message-txt-area {
   border-radius: 5px;
   resize: none;
 }
 
 .radio-option {
-}
-
-input[type="radio"]:checked + div + .radio-option {
-  background-color: lightblue;
-  border-color: blue;
 }
 
 .text-input:focus,
