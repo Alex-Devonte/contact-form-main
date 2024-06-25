@@ -75,6 +75,56 @@ label {
   padding: 14px;
 }
 
+/*Custom radio styling*/
+.radio-option input[type="radio"] {
+  display: none;
+}
+
+.radio-option input[type="radio"]:checked + label::before {
+  display: none;
+}
+
+.radio-option input[type="radio"]:checked + label img.custom-radio {
+  display: block;
+  position: absolute;
+  height: 20px;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+}
+
+.radio-option label {
+  cursor: pointer;
+  position: relative;
+  padding-left: 30px;
+  user-select: none;
+}
+
+.radio-option label::before {
+  background: #fff;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  content: "";
+  height: 15px;
+  left: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px;
+}
+
+.radio-option label img.custom-radio {
+  display: none;
+  position: absolute;
+  height: 20px;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+}
+/*End custom radio styling*/
+
 .checked {
   background-color: var(--primary-light-green);
 }
@@ -82,9 +132,6 @@ label {
 #message-txt-area {
   border-radius: 5px;
   resize: none;
-}
-
-.radio-option {
 }
 
 .text-input:focus,
@@ -97,6 +144,47 @@ label {
 
 .consent-group {
   flex-direction: row;
+}
+
+/*Custom checkbox styling*/
+#consent-checkbox {
+  display: none;
+}
+
+/* Show the custom checkbox image when checked */
+#consent-checkbox:checked + label img.custom-checkbox {
+  display: block;
+}
+
+label[for="consent-checkbox"]::before {
+  background: #fff;
+  border: 2px solid #ccc;
+  border-radius: 3px;
+  content: "";
+  display: inline-block;
+  height: 15px;
+  left: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px;
+}
+
+label[for="consent-checkbox"] img.custom-checkbox {
+  display: none;
+  height: 20px;
+  left: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+}
+
+label[for="consent-checkbox"] {
+  cursor: pointer;
+  padding-left: 40px;
+  position: relative;
+  user-select: none;
 }
 
 #submit-btn {
