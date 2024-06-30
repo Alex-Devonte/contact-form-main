@@ -19,8 +19,24 @@ body {
 }
 
 #wrapper {
+  align-items: center;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+}
+
+#toast-msg {
+  background-color: var(--neutral-dark-grey);
+  border-radius: 10px;
+  color: #fff;
+  display: none;
+  padding: 15px;
+  margin-top: 15px;
+}
+
+#toast-msg h3,
+#toast-msg p {
+  padding: 5px;
 }
 
 #form-container {
@@ -51,6 +67,15 @@ h1 {
   margin: 20px 0;
 }
 
+.error-msg {
+  color: var(--error-red);
+  display: none;
+}
+
+.field-error {
+  border: 1px solid var(--error-red);
+}
+
 label {
   font-size: 16px;
   font-weight: 400;
@@ -72,6 +97,7 @@ label {
   border: 1px solid var(--neutral-medium-grey);
   border-radius: 5px;
   cursor: pointer;
+  margin: 10px 0;
   padding: 14px;
 }
 
@@ -143,7 +169,7 @@ label {
 }
 
 .consent-group {
-  flex-direction: row;
+  flex-direction: column;
 }
 
 /*Custom checkbox styling*/
