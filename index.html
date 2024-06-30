@@ -24,6 +24,10 @@
   </head>
   <body>
     <div id="wrapper">
+      <div id="toast-msg">
+        <h3>Message Sent!</h3>
+        <p>Thanks for completing the form. We'll be in touch soon!</p>
+      </div>
       <div id="form-container">
         <form id="contact-form">
           <h1>Contact Us</h1>
@@ -40,6 +44,7 @@
                 class="text-input"
                 name="first-name"
               />
+              <div class="error-msg">This field is required</div>
             </div>
             <div class="form-group">
               <label for="last-name">
@@ -52,6 +57,7 @@
                 class="text-input"
                 name="last-name"
               />
+              <div class="error-msg">This field is required</div>
             </div>
           </div>
 
@@ -60,7 +66,8 @@
               Email Address
               <span class="required-star">*</span>
             </label>
-            <input type="text" id="email" class="text-input" name="email" />
+            <input type="email" id="email" class="text-input" name="email" />
+            <div class="error-msg">Please enter a valid email address</div>
           </div>
 
           <div class="form-group">
@@ -99,6 +106,7 @@
                 >
               </div>
             </div>
+            <div class="error-msg">Please select a query type</div>
           </div>
 
           <div class="form-group">
@@ -107,6 +115,7 @@
               <span class="required-star">*</span>
             </label>
             <textarea id="message-txt-area" rows="10"></textarea>
+            <div class="error-msg">This field is required</div>
           </div>
 
           <div class="form-group consent-group">
@@ -119,6 +128,9 @@
               I consent to being contacted by the team
               <span class="required-star">*</span>
             </label>
+            <div class="error-msg">
+              To submit this form, please consent to being contacted
+            </div>
           </div>
 
           <div class="form-group">
